@@ -1,0 +1,13 @@
+
+.strike {
+	position:relative;
+}
+
+.strike::after {
+	border-bottom:1px solid #000;
+	content:'';
+	position:absolute;
+	width:100%;
+	right:0;
+	top:40%;
+}

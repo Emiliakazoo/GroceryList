@@ -1,0 +1,31 @@
+<div class="col-xs-12">
+    <div class="jumbotron text-center">
+        <h1>Add Item Below</h1>
+    </div>
+    <form name="groceryForm">
+
+        <p><b>Dirty:</b> {{groceryForm.$dirty}}</p>
+        <p><b>Pristine:</b> {{groceryForm.$pristine}}</p>
+        <p><b>Valid:</b> {{groceryForm.$valid}}</p>
+
+        <div class="alert alert-danger" role="alert" ng-show="groceryForm.$dirty && !groceryForm.$valid">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Error:</span>
+            Enter a valid grocery item!
+        </div>
+
+        <div class="form-group">
+            <input type="text" ng-pattern="/^[a-zA-Z\s]*$/" class="form-control" placeholder="Grocery Item" ng-model="groceryItem.itemName" required>
+        </div>
+        <div class="form-group">
+            <a href="#/" type="button" class="btn btn-success btn-larg btn-block" ng-click="save()" ng-disabled="!groceryForm.$valid">
+                <span class="glyphicon glyphicon-pushpin"></span> Save
+            </a>
+        </div>
+        <div class="form-group">
+            <a href="#/" type="button" class="btn btn-default btn-larg btn-block">
+                <span class="glyphicon glyphicon-remove"></span> Cancel this
+            </a>
+        </div>
+    </form>
+</div>

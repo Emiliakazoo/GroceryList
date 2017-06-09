@@ -1,0 +1,15 @@
+	<div class="col-xs-12">
+		 <a href="#/addItem" target="_self" class="btn btn-primary btn-lg btn-block">
+	  		<span class="glyphicon glyphicon-plus"></span>
+	  		Add grocery item
+	  	</a>
+
+	<ul class="list-group">
+	  <li ng-repeat="item in groceryItems | orderBy: '-date'" class="list-group-item text-center clearfix">
+	  	<ea-grocery-item></ea-grocery-item>
+	  </li>
+
+	</ul>
+	<!--adding comment-->
+  	</div>
+	
